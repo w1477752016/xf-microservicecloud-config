@@ -16,7 +16,7 @@ spring:
     name: microservicecloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    driver-class-name: com.mysql.jc.jdbc.Driver              # mysql驱动包
+    driver-class-name: com.mysql.cj.jdbc.Driver              # mysql驱动包
     url: jdbc:mysql://localhost:3306/clouddb01?serverTimezone=UTC              # 数据库名称
     username: root
     password: 123456
@@ -36,7 +36,7 @@ eureka:
     prefer-ip-address: true     #访问路径可以显示IP地址
 info:
   app.name: xr-microservicecloud
-  company.name: www.xr.com
+  company.name: www.zy.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 ---
@@ -48,7 +48,7 @@ spring:
     name: microservicecloud-config-dept-client
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jc.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/clouddb02?serverTimezone=UTC
     username: root
     password: 123456
@@ -61,7 +61,7 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.xr.springcloud.entities
+  type-aliases-package: com.zy.entities
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml
 
@@ -75,6 +75,6 @@ eureka:
 
 info:
   app.name: xr-microservicecloud-springcloudconfig02
-  company.name: www.xr.com
+  company.name: www.zy.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
